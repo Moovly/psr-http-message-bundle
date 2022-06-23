@@ -40,7 +40,7 @@ final class Psr7ServerRequestResolver implements ArgumentValueResolverInterface
     /**
      * {@inheritdoc}
      */
-    public function supports(Request $request, ArgumentMetadata $argument): void
+    public function supports(Request $request, ArgumentMetadata $argument): bool
     {
         return isset(self::$supportedTypes[$argument->getType()]);
     }
